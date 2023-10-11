@@ -6,7 +6,7 @@ const Sort = () => {
   return (
     <div className={styles.sort}>
       <div className={styles.sort__label}>
-        <img src={sortLabel} alt={'Sort label'}/>
+        <div className={styles.sortLabel}> </div>
         <b>Сортировка по: </b>
       </div>
       <div className={styles.sort__popup}>
