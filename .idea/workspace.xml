@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a755a254-85f3-4285-afb8-9c6e0ba76616" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/test.js" beforeDir="false" />
-    </list>
+    <list default="true" id="a755a254-85f3-4285-afb8-9c6e0ba76616" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -90,7 +88,7 @@
       <option name="presentableId" value="Default" />
       <updated>1696420471874</updated>
       <workItem from="1696420473853" duration="5422000" />
-      <workItem from="1696490100882" duration="25078000" />
+      <workItem from="1696490100882" duration="25563000" />
     </task>
     <task id="LOCAL-00001" summary="разбила все на компоненты">
       <created>1696710149068</created>
