@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a755a254-85f3-4285-afb8-9c6e0ba76616" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/assets/pizzas.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Filters/Filters.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Filters/Filters.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Filters/Filters.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Filters/Filters.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainContent/MainContent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainContent/MainContent.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PizzaBlock/PizzaBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/PizzaBlock/PizzaBlock.js" afterDir="false" />
     </list>
@@ -56,6 +55,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/Sort" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets" />
+    </key>
   </component>
   <component name="RunManager" selected="npm.start (1)">
     <configuration name="start (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
@@ -94,7 +96,7 @@
       <option name="presentableId" value="Default" />
       <updated>1696420471874</updated>
       <workItem from="1696420473853" duration="5422000" />
-      <workItem from="1696490100882" duration="30505000" />
+      <workItem from="1696490100882" duration="31934000" />
     </task>
     <task id="LOCAL-00001" summary="разбила все на компоненты">
       <created>1696710149068</created>
@@ -124,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697372467346</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="добавила счетчик на кнопку&#10;сделала список пицц">
+      <created>1697385234212</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1697385234212</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,7 +144,8 @@
     <MESSAGE value="исправила треугольник" />
     <MESSAGE value="удалила ненужное" />
     <MESSAGE value="добавила счетчик на кнопку" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавила счетчик на кнопку" />
+    <MESSAGE value="добавила счетчик на кнопку&#10;сделала список пицц" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавила счетчик на кнопку&#10;сделала список пицц" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
