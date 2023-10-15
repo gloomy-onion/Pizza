@@ -1,8 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styles from './PizzaBlock.module.scss';
 import cn from 'classnames';
 
 const PizzaBlock = () => {
+  const [pizzaCount, setPizzaCount] = useState(0);
+
+  const onClickAdd = () => {
+    setPizzaCount(pizzaCount + 1);
+  };
+
   return (
     <div className={styles.pizzaBlock}>
       <img
@@ -25,7 +31,7 @@ const PizzaBlock = () => {
       </div>
       <div className={styles.pizzaBlock__bottom}>
         <div className={styles.pizzaBlock__price}>от 395 ₽</div>
-        <div className={cn(styles.button, styles.button__outline, styles.button__add)}>
+        <button onClick={onClickAdd} className={cn(styles.button, styles.button__outline, styles.button__add)}>
           <svg
             width="12"
             height="12"
@@ -39,8 +45,8 @@ const PizzaBlock = () => {
             />
           </svg>
           <span>Добавить</span>
-          <i>2</i>
-        </div>
+          <i>{pizzaCount}</i>
+        </button>
       </div>
     </div>
   );
