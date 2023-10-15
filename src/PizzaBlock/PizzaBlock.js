@@ -2,8 +2,10 @@ import React, {useState} from 'react';
 import styles from './PizzaBlock.module.scss';
 import cn from 'classnames';
 
-const PizzaBlock = () => {
-  const [pizzaCount, setPizzaCount] = useState(0);
+const PizzaBlock = (props) => {
+  const {title, price} = props
+
+    const [pizzaCount, setPizzaCount] = useState(0);
 
   const onClickAdd = () => {
     setPizzaCount(pizzaCount + 1);
@@ -16,7 +18,7 @@ const PizzaBlock = () => {
         src={'https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/b750f576-4a83-48e6-a283-5a8efb68c35d.jpg'}
         alt={'Pizza'}
       />
-      <h4 className={styles.pizzaBlock__title}>Чизбургер-пицца</h4>
+      <h4 className={styles.pizzaBlock__title}>{title}</h4>
       <div className={styles.pizzaBlock__selector}>
         <ul>
           <li className={styles.active}>тонкое</li>
@@ -30,7 +32,7 @@ const PizzaBlock = () => {
         </ul>
       </div>
       <div className={styles.pizzaBlock__bottom}>
-        <div className={styles.pizzaBlock__price}>от 395 ₽</div>
+        <div className={styles.pizzaBlock__price}>{price} р.</div>
         <button onClick={onClickAdd} className={cn(styles.button, styles.button__outline, styles.button__add)}>
           <svg
             width="12"

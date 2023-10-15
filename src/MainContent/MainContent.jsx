@@ -8,12 +8,12 @@ const MainContent = () => {
     <div>
       <h2 className={styles.content__title}>Все пиццы</h2>
       <div className={styles.content__items}>
-        <PizzaBlock/>
-        <PizzaBlock/>
-        <PizzaBlock/>
-        <PizzaBlock/>
-        <PizzaBlock/>
-        <PizzaBlock/>
+        <PizzaBlock title={'Чизбургер'} price={556}/>
+        <PizzaBlock title={'Чизбургер'} price={556}/>
+        <PizzaBlock title={'Чизбургер'} price={556}/>
+        <PizzaBlock title={'Чизбургер'} price={556}/>
+        <PizzaBlock title={'Маргарита'} price={322}/>
+        <PizzaBlock title={'Чизбургер'} price={556}/>
       </div>
     </div>
   );
