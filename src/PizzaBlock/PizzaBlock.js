@@ -29,13 +29,14 @@ const PizzaBlock = (props) => {
       <div className={styles.pizzaBlock__selector}>
         <ul>
           {types.map((type) => (
-            <li onClick={() => setActiveType(type)}
+            <li key={type} onClick={() => setActiveType(type)}
                 className={activeType === type ? styles.active : ''}>{typeNames[type]}</li>
           ))}
         </ul>
         <ul>
           {sizes.map((size, i) => (
-            <li onClick={() => setActiveSize(i)} className={activeSize === i ? styles.active : ''}>{size} см.</li>))}
+            <li key={size} onClick={() => setActiveSize(i)}
+                className={activeSize === i ? styles.active : ''}>{size} см.</li>))}
         </ul>
       </div>
       <div className={styles.pizzaBlock__bottom}>

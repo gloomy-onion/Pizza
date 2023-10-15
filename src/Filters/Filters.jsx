@@ -16,7 +16,7 @@ const Filters = () => {
       <ul>
         {
           categories.map((value, i) => (
-            <li onClick={() => onClickFilter(i)} className={activeIndex === i ? styles.active : ''}>{value}</li>
+            <li key={i} onClick={() => onClickFilter(i)} className={activeIndex === i ? styles.active : ''}>{value}</li>
           ))
         }
         </ul>

@@ -10,6 +10,7 @@ const MainContent = () => {
       <div className={styles.content__items}>
         {pizzas.map((pizza) => (
           <PizzaBlock
+            key={pizza.title}
             {...pizza}
           />
         ))}

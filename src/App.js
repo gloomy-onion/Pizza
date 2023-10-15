@@ -7,20 +7,18 @@ import styles from './App.module.scss';
 
 function App() {
   return (
-    <div>
-      <body>
-      <div className={styles.wrapper}>
-        <Header/>
-        <div className={styles.content}>
-          <div className={styles.content__top}>
-            <Filters/>
-            <Sort/>
-          </div>
-          <MainContent/>
+    <body>
+    <div className={styles.wrapper}>
+      <Header/>
+      <div className={styles.content}>
+        <div className={styles.content__top}>
+          <Filters/>
+          <Sort/>
         </div>
+        <MainContent/>
       </div>
-      </body>
     </div>
+    </body>
   );
 }
 
