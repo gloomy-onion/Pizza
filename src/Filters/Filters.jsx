@@ -19,7 +19,7 @@ const Filters = () => {
             <li key={i} onClick={() => onClickFilter(i)} className={activeIndex === i ? styles.active : ''}>{value}</li>
           ))
         }
-        </ul>
+      </ul>
     </div>
   );
 };

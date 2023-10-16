@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import styles from './Sort.module.scss';
-import {logDOM} from '@testing-library/react';
 
 const Sort = () => {
   const [open, setOpen] = useState(false);
@@ -22,7 +21,7 @@ const Sort = () => {
       {open && <div className={styles.sort__popup}>
         <ul>
           {list.map((name, i) => (
-            <li key={name} onClick={()=>onClickList(i)}
+            <li key={name} onClick={() => onClickList(i)}
                 className={selected === i ? styles.active : ''}>{name}</li>
           ))}
         </ul>
