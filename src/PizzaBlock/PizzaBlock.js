@@ -14,9 +14,6 @@ const PizzaBlock = (props) => {
   const typeNames = ['тонкое', 'традиционное'];
   const [activeType, setActiveType] = useState(0);
   const [activeSize, setActiveSize] = useState(0);
-  //здесь эти два юзстейта выглядят как дублирование кода, потому что они очень похожие,
-  //плюс еще в фильтрах примерно одно и тоже, нельзя ли их все сделать общей функцией и вынести
-
 
   return (
     <div className={styles.pizzaBlock}>

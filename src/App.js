@@ -1,22 +1,22 @@
 import './App.module.scss';
 import Header from './Header/Header';
-import Filters from './Filters/Filters';
-import MainContent from './MainContent/MainContent';
-import Sort from './Sort/Sort';
 import styles from './App.module.scss';
+import Home from './pages/Home';
+import {Route, Routes} from 'react-router-dom';
+import NotFound from './pages/NotFound';
+import Cart from './pages/Cart';
 
 function App() {
   return (
     <body>
     <div className={styles.wrapper}>
       <Header/>
-      <div className={styles.content}>
-        <div className={styles.content__top}>
-          <Filters/>
-          <Sort/>
-        </div>
-        <MainContent/>
-      </div>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/cart' element={<Cart/>}/>
+        <Route path='*' element={<NotFound/>}/>
+      </Routes>
+
     </div>
     </body>
   );
