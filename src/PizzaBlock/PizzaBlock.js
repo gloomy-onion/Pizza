@@ -1,31 +1,47 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styles from './PizzaBlock.module.scss';
 import cn from 'classnames';
 
-const PizzaBlock = () => {
+const PizzaBlock = (props) => {
+  const {title, price, imageUrl, sizes, types} = props;
+
+  const [pizzaCount, setPizzaCount] = useState(0);
+
+  const onClickAdd = () => {
+    setPizzaCount(pizzaCount + 1);
+  };
+
+  const typeNames = ['тонкое', 'традиционное'];
+  const [activeType, setActiveType] = useState(0);
+  const [activeSize, setActiveSize] = useState(0);
+  //здесь эти два юзстейта выглядят как дублирование кода, потому что они очень похожие,
+  //плюс еще в фильтрах примерно одно и тоже, нельзя ли их все сделать общей функцией и вынести
+
+
   return (
     <div className={styles.pizzaBlock}>
       <img
         className={styles.pizzaBlock__image}
-        src={'https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/b750f576-4a83-48e6-a283-5a8efb68c35d.jpg'}
+        src={imageUrl}
         alt={'Pizza'}
       />
-      <h4 className={styles.pizzaBlock__title}>Чизбургер-пицца</h4>
+      <h4 className={styles.pizzaBlock__title}>{title}</h4>
       <div className={styles.pizzaBlock__selector}>
         <ul>
-          <li className={styles.active}>тонкое</li>
-          <li>традиционное</li>
+          {types.map((type) => (
+            <li key={type} onClick={() => setActiveType(type)}
+                className={activeType === type ? styles.active : ''}>{typeNames[type]}</li>
+          ))}
         </ul>
         <ul>
-          <li className={styles.active}>26 см.
-          </li>
-          <li>30 см.</li>
-          <li>40 см.</li>
+          {sizes.map((size, i) => (
+            <li key={size} onClick={() => setActiveSize(i)}
+                className={activeSize === i ? styles.active : ''}>{size} см.</li>))}
         </ul>
       </div>
       <div className={styles.pizzaBlock__bottom}>
-        <div className={styles.pizzaBlock__price}>от 395 ₽</div>
-        <div className={cn(styles.button, styles.button__outline, styles.button__add)}>
+        <div className={styles.pizzaBlock__price}>{price} р.</div>
+        <button onClick={onClickAdd} className={cn(styles.button, styles.button__outline, styles.button__add)}>
           <svg
             width="12"
             height="12"
@@ -39,8 +55,8 @@ const PizzaBlock = () => {
             />
           </svg>
           <span>Добавить</span>
-          <i>2</i>
-        </div>
+          <i>{pizzaCount}</i>
+        </button>
       </div>
     </div>
   );
