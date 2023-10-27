@@ -2,7 +2,9 @@
 
 .sort {
   position: relative;
-
+  @media (max-width: 1260px) {
+    padding-bottom: 20px;
+  }
 
   &__label {
     display: flex;
