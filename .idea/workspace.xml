@@ -2,15 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a755a254-85f3-4285-afb8-9c6e0ba76616" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/img/cartEmptyImg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Cart.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/cartImage.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/trashBin.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Cart/Cart.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Cart/CartItem.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Filters/Filters.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Filters/Filters.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainContent/MainContent.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainContent/MainContent.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PizzaBlock/PizzaBlock.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/PizzaBlock/PizzaBlock.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sort/Sort.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sort/Sort.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Cart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Cart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart/CartEmpty.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Cart.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart/Cart.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/variables.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,6 +63,7 @@
       <recent name="$PROJECT_DIR$/src/Sort" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/pages/Cart" />
       <recent name="$PROJECT_DIR$/src/assets" />
     </key>
   </component>
@@ -105,7 +105,7 @@
       <updated>1696420471874</updated>
       <workItem from="1696420473853" duration="5422000" />
       <workItem from="1696490100882" duration="37545000" />
-      <workItem from="1697544603161" duration="11839000" />
+      <workItem from="1697544603161" duration="14220000" />
     </task>
     <task id="LOCAL-00001" summary="разбила все на компоненты">
       <created>1696710149068</created>
@@ -170,7 +170,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697999089076</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="сделала пустую корзину">
+      <created>1698403728634</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1698403728635</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,7 +193,8 @@
     <MESSAGE value="сделала попап" />
     <MESSAGE value="получаем пиццы с бэкэнда" />
     <MESSAGE value="Добавила роутер, прелоудер" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавила роутер, прелоудер" />
+    <MESSAGE value="сделала пустую корзину" />
+    <option name="LAST_COMMIT_MESSAGE" value="сделала пустую корзину" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from './Cart.module.scss'
 import {Link} from 'react-router-dom';
-import cartEmptyImg from './../img/cartEmptyImg.png'
+import cartEmptyImg from '../../img/cartEmptyImg.png'
 import cn from 'classnames';
 
-const Cart = () => {
+const CartEmpty = () => {
   return (
     <div className={styles.cart__empty}>
       <h2>
@@ -23,4 +23,4 @@ const Cart = () => {
   );
 };
 
-export default Cart;
+export default CartEmpty;

@@ -4,7 +4,7 @@ import styles from './App.module.scss';
 import Home from './pages/Home';
 import {Route, Routes} from 'react-router-dom';
 import NotFound from './pages/NotFound';
-import Cart from './pages/Cart';
+import Cart from './pages/Cart/Cart';
 
 function App() {
   return (
