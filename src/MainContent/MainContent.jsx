@@ -8,21 +8,29 @@ import Sort from '../Sort/Sort';
 const MainContent = () => {
   const [items, setItems] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [categoryId, setCategoryId] = useState(0);
+  const [sortType, setSortType] = useState({name: 'популярности', sortProperty: 'rating'});
+
 
   useEffect(() => {
-    fetch('https://64c7f223a1fe0128fbd57bb6.mockapi.io/pizza').then(res => {
+    setIsLoading(true);
+    const category = categoryId > 0 ? `category=${categoryId}` : '';
+    const sortBy = sortType.sortProperty.replace('-', '');
+    const order = sortType.sortProperty.includes('-') ? 'asc' : 'desc';
+    fetch(`https://64c7f223a1fe0128fbd57bb6.mockapi.io/pizza?
+    ${category}&sortBy=${sortBy}&order=${order} `).then(res => {
       return res.json();
     }).then((arr) => {
       setItems(arr);
       setIsLoading(false);
     });
-  }, []);
+  }, [categoryId, sortType]);
 
   return (
     <div>
       <div className={styles.content__top}>
-        <Filters/>
-        <Sort/>
+        <Filters value={categoryId} onClickCategory={(id) => setCategoryId(id)}/>
+        <Sort value={sortType} onChangeSort={(i) => setSortType(i)}/>
       </div>
       <div className={styles.content}>
         <h2 className={styles.content__title}>Все пиццы</h2>

@@ -1,12 +1,10 @@
-import React, {useState} from 'react';
+import React from 'react';
 import styles from './Filters.module.scss';
 
 
-const Filters = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const onClickFilter = (index) => {
-    setActiveIndex(index);
-  };
+const Filters = (props) => {
+  const {value, onClickCategory} = props;
+
   const categories = [
     'Все', 'Мясные', 'Вегетарианские', 'Гриль', 'Острые', 'Закрытые'
   ];
@@ -15,8 +13,8 @@ const Filters = () => {
     <div className={styles.categories}>
       <ul>
         {
-          categories.map((value, i) => (
-            <li key={i} onClick={() => onClickFilter(i)} className={activeIndex === i ? styles.active : ''}>{value}</li>
+          categories.map((categoryName, i) => (
+            <li key={i} onClick={() => onClickCategory(i)} className={value === i ? styles.active : ''}>{categoryName}</li>
           ))
         }
       </ul>
