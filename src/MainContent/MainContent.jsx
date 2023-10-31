@@ -14,11 +14,11 @@ const MainContent = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    const category = categoryId > 0 ? `category=${categoryId}` : '';
     const sortBy = sortType.sortProperty.replace('-', '');
     const order = sortType.sortProperty.includes('-') ? 'asc' : 'desc';
-    fetch(`https://64c7f223a1fe0128fbd57bb6.mockapi.io/pizza?
-    ${category}&sortBy=${sortBy}&order=${order} `).then(res => {
+    fetch(`https://64c7f223a1fe0128fbd57bb6.mockapi.io/pizza?${
+      categoryId > 0 ? `category=${categoryId}` : ''
+    }&sortBy=${sortBy}&order=${order} `).then(res => {
       return res.json();
     }).then((arr) => {
       setItems(arr);
