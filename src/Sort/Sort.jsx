@@ -1,17 +1,12 @@
 import React, {useState} from 'react';
 import styles from './Sort.module.scss';
+import {sortList} from '../common/constants';
 
 const Sort = (props) => {
-  const {value, onChangeSort} = props;
+  const {sortType, onChangeSort} = props;
 
   const [open, setOpen] = useState(false);
-  const list = [
-    {name: 'популярности ↓', sortProperty: 'rating'},
-    {name: 'популярности ↑', sortProperty: '-rating'},
-    {name: 'цене ↓', sortProperty: 'price'},
-    {name: 'цене ↑', sortProperty: '-price'},
-    {name: 'алфавиту ↓', sortProperty: 'title'},
-    {name: 'алфавиту ↑', sortProperty: '-title'}];
+
   const onClickList = (i) => {
     onChangeSort(i);
     setOpen(false);
@@ -22,13 +17,13 @@ const Sort = (props) => {
       <div className={styles.sort__label}>
         <div className={styles.sortLabel}/>
         <b>Сортировка по: </b>
-        <span onClick={() => setOpen(!open)}>{value.name}</span>
+        <span onClick={() => setOpen(!open)}>{sortType.name}</span>
       </div>
       {open && <div className={styles.sort__popup}>
         <ul>
-          {list.map((obj, i) => (
-            <li key={i} onClick={() => onClickList(obj)}
-                className={value.sortProperty === obj.sortProperty ? styles.active : ''}>{obj.name}</li>
+          {sortList.map((sortItem, i) => (
+            <li key={i} onClick={() => onClickList(sortItem)}
+                className={sortType.sortProperty === sortItem.sortProperty ? styles.active : ''}>{sortItem.name}</li>
           ))}
         </ul>
       </div>}

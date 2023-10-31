@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './Cart.module.scss';
 import cn from 'classnames';
-import cartImage from './../../img/cartImage.svg';
-import trashBin from './../../img/trashBin.svg'
+import cartImage from '../img/cartImage.svg';
+import trashBin from '../img/trashBin.svg'
 
 const Cart = () => {
   return (
@@ -30,7 +30,7 @@ const Cart = () => {
                 <span> Сумма заказа: <b>900 ₽</b> </span>
               </div>
               <div className={styles.cart__bottom_buttons}>
-                <a href="/" className={cn(styles.button, styles.goBackBtn)}>
+                <a href="/src/pages" className={cn(styles.button, styles.goBackBtn)}>
                   <span>Вернуться назад</span>
                 </a>
                 <div className={cn(styles.button, styles.payBtn)}>
