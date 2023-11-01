@@ -4,19 +4,16 @@ import styles from './App.module.scss';
 import Home from './pages/Home';
 import {Route, Routes} from 'react-router-dom';
 import NotFound from './pages/NotFound';
-import Cart from './pages/Cart/Cart';
-import {useState} from 'react';
+import CartPage from './pages/CartPage';
 
 function App() {
-  const [searchValue, setSearchValue] = useState('');
-
   return (
     <body>
     <div className={styles.wrapper}>
-      <Header searchValue={searchValue} setSearchValue={setSearchValue}/>
+      <Header/>
       <Routes>
         <Route path='/' element={<Home/>}/>
-        <Route path='/cart' element={<Cart/>}/>
+        <Route path='/cart' element={<CartPage/>}/>
         <Route path='*' element={<NotFound/>}/>
       </Routes>
 
