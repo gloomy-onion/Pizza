@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import styles from './Sort.module.scss';
-import {sortList} from '../common/constants';
+import {sortList} from './constants';
 
 const Sort = (props) => {
   const {sortType, onChangeSort} = props;
