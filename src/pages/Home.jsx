@@ -1,10 +1,10 @@
 import React from 'react';
 import MainContent from '../MainContent/MainContent';
 
-const Home = () => {
+const Home = ({searchValue}) => {
   return (
     <div>
-      <MainContent/>
+      <MainContent searchValue={searchValue}/>
     </div>
   );
 };

@@ -19,4 +19,8 @@ const SkeletonItem = () => (
   </ContentLoader>
 );
 
-export const Skeleton = [...new Array(6)].map((_, index) => <SkeletonItem key={index}/>)
+const Skeleton = () => {
+  return ([...new Array(6)].map((_, index) => <SkeletonItem key={index}/>));
+};
+
+export default Skeleton;
