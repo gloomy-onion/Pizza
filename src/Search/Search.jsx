@@ -1,9 +1,10 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import styles from './Search.module.scss';
 import searchIcon from './../img/searchIcon.svg';
+import {SearchContext} from '../App';
 
-const Search = (props) => {
-  const {searchValue, setSearchValue} = props;
+const Search = () => {
+  const {searchValue, setSearchValue} = useContext(SearchContext)
 
   return (
     <div className={styles.root}>

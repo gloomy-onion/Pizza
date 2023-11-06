@@ -6,10 +6,12 @@ import Filters from '../Filters/Filters';
 import Sort from '../Sort/Sort';
 import {API_URL} from '../common/constants';
 import Pagination from '../Pagination/Pagination';
+import {useContext} from 'react';
+import {SearchContext} from '../App';
 
 
-const MainContent = (props) => {
-  const {searchValue} = props;
+const MainContent = () => {
+  const {searchValue} = useContext(SearchContext)
   const [items, setItems] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [categoryId, setCategoryId] = useState(0);
