@@ -12,6 +12,7 @@ const Search = () => {
       <input value={searchValue} onChange={(event) => setSearchValue(event.target.value)}
              placeholder={'Поиск пиццы...'}/>
       {searchValue && (<button onClick={() => setSearchValue('')} className={styles.clearBtn}/>)}
+    {/*TODO:  переделать ебаную кнопку*/}
     </div>
   );
 };

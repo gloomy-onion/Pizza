@@ -21,7 +21,6 @@ const MainContent = () => {
   const onChangeCategory = (id) => {
     dispatch(setCategoryId(id));
   };
-  //фильтрация по одному месту пошла, хочу чтоб вместе разобрли этот ваш новый редакс
 
   useEffect(() => {
     setIsLoading(true);
@@ -29,15 +28,13 @@ const MainContent = () => {
     const sortBy = sortType.sortProperty.replace('-', '');
     const order = sortType.sortProperty.includes('-') ? 'asc' : 'desc';
     const search = searchValue ? `&search=${searchValue}` : '';
-    fetch(`${API_URL}pizza?page=${currentPage}&limit=4&
-    ${category}&sortBy=${sortBy}&order=${order}${search} `).then(res => {
+    fetch(`${API_URL}pizza?page=${currentPage}&limit=4&${category}&sortBy=${sortBy}&order=${order}${search} `).then(res => {
       return res.json();
     }).then((arr) => {
       setItems(arr);
       setIsLoading(false);
     });
   }, [categoryId, sortType, searchValue, currentPage]);
-  //поиск не работает хотя запрос уходит
 
   const pizzas = items.map((pizza) => (
     <PizzaBlock
