@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import PizzaBlock from '../PizzaBlock/PizzaBlock';
 import styles from './MainContent.module.scss';
 import Skeleton from '../PizzaBlock/Skeleton';
@@ -6,18 +6,22 @@ import Filters from '../Filters/Filters';
 import Sort from '../Sort/Sort';
 import {API_URL} from '../common/constants';
 import Pagination from '../Pagination/Pagination';
-import {useContext} from 'react';
 import {SearchContext} from '../App';
-
+import {useDispatch, useSelector} from 'react-redux';
+import {setCategoryId} from '../redux/Slices/filterSlice';
 
 const MainContent = () => {
-  const {searchValue} = useContext(SearchContext)
+  const dispatch = useDispatch();
+  const categoryId = useSelector((state) => state.filter.categoryId);
+  const {searchValue} = useContext(SearchContext);
   const [items, setItems] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [categoryId, setCategoryId] = useState(0);
   const [sortType, setSortType] = useState({name: 'популярности', sortProperty: 'rating'});
   const [currentPage, setCurrentPage] = useState(1);
-
+  const onChangeCategory = (id) => {
+    dispatch(setCategoryId(id));
+  };
+  //фильтрация по одному месту пошла, хочу чтоб вместе разобрли этот ваш новый редакс
 
   useEffect(() => {
     setIsLoading(true);
@@ -33,7 +37,7 @@ const MainContent = () => {
       setIsLoading(false);
     });
   }, [categoryId, sortType, searchValue, currentPage]);
-  //поиск не работает
+  //поиск не работает хотя запрос уходит
 
   const pizzas = items.map((pizza) => (
     <PizzaBlock
@@ -45,7 +49,7 @@ const MainContent = () => {
   return (
     <div>
       <div className={styles.content__top}>
-        <Filters value={categoryId} onClickCategory={(id) => setCategoryId(id)}/>
+        <Filters value={categoryId} onClickCategory={onChangeCategory}/>
         <Sort sortType={sortType} onChangeSort={(i) => setSortType(i)}/>
       </div>
       <div className={styles.content}>
